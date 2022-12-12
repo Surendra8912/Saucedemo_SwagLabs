@@ -12,4 +12,6 @@ import org.junit.runner.RunWith;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 
 public class demoSwaglabs {
+
+    
 }
