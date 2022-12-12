@@ -58,7 +58,7 @@ String BaseUrl = "https://www.saucedemo.com/";
         driver.findElement(By.id("logout_sidebar_link")).click();
     }
 
-    public void Quit() throws InterruptedException {
-        driver.quit();
-    }
+//    public void Quit() throws InterruptedException {
+//        driver.quit();
+//    }
 }
