@@ -1,9 +1,9 @@
-#
-#Feature: SwagLabs
-#  @Regression @Sanity @Smoke
-#  Scenario: User able to open url
-#    Given user should open url
-#
+##
+##Feature: SwagLabs
+##  @Regression @Sanity @Smoke
+##  Scenario: User able to open url
+##    Given user should open url
+##
 #  @Regression
 #  Scenario: User login
 #    When user able to login

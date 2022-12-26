@@ -5,24 +5,35 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SwaglabsDemo {
     static WebDriver driver;
-String BaseUrl = "https://www.saucedemo.com/";
-    public void urlPage() {
+//String BaseUrl = "https://www.saucedemo.com/";
+    public void openbrowser() {
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
         driver = new ChromeDriver();
 //        Thread.sleep(3000);
         driver.manage().window().maximize();
-        driver.get(BaseUrl);
     }
 
-    public void login() {
+    public void urlPage(String url){
+        driver.get(url);
+    }
+//    public void login() {
+//        driver.findElement(By.id("user-name")).click();
+//        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+//        driver.findElement(By.id("password")).click();
+//        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+//
+//
+//    }
+
+    public void login(String Username, String password){
         driver.findElement(By.id("user-name")).click();
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("user-name")).sendKeys(Username);
         driver.findElement(By.id("password")).click();
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
-
+        driver.findElement(By.id("password")).sendKeys(password);
     }
-
+    public void loginSubmit(){
+        driver.findElement(By.id("login-button")).click();
+    }
     public void AddToCart() {
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
     }
@@ -43,7 +54,7 @@ String BaseUrl = "https://www.saucedemo.com/";
     }
 
     public void Overview() {
-        driver.findElement(By.id("finis")).click();
+        driver.findElement(By.id("finish")).click();
     }
 
     public void BackToHome() throws InterruptedException {
@@ -52,7 +63,7 @@ String BaseUrl = "https://www.saucedemo.com/";
     }
 
     public void Logout() throws InterruptedException {
-        driver.findElement(By.id("react-burger-menu-bt")).click();
+        driver.findElement(By.id("react-burger-menu-btn")).click();
         Thread.sleep(2000);
         driver.findElement(By.id("logout_sidebar_link")).click();
     }
