@@ -29,10 +29,7 @@ steps:
     reportSuiteAsScenarios: true
     metadata: 
 - task: PublishPipelineMetadata@0
-- bash: |
- 
- 
-    curl -H "Content-Type: multipart/form-data" -u $jupudisurendra@gmail.com:$Surendra@2107 -F "file=@target/surefire-reports/TEST-com.xpand.java.SwaglabsDemo.java" "$https://surendra2107.atlassian.net/rest/raven/1.0/import/execution/junit?projectKey=$JA"
+
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
